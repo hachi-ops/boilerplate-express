@@ -38,10 +38,10 @@ app.get('/json', (req, res) => {
 })
 
 app.get('/now', (req, res, next) => {
-  req.time = new Date.toString()
+  req.time = new Date().toString()
   next()
 }, (req, res) => {
-  req.json({time: req.time})
+  res.json({time: req.time})
 })
 
 
