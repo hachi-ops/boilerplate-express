@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   next()
 }
   )
-app.use(bodyParser.urlencoded({extended: false}))
+.use(bodyParser.urlencoded({extended: false}))
 
 console.log("Hello World")
 
