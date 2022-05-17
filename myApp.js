@@ -16,6 +16,13 @@ app.get('/', function(req, res){
   res.sendFile(absolutePath)
 })
 
+pathToStylesheet = __dirname + '/public'
+
+app.use('/public', (req, res) => {
+       res.send(express.static)
+})
+        
+
 
 
 
