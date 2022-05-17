@@ -18,10 +18,7 @@ app.get('/', function(req, res){
 
 pathToStylesheet = __dirname + '/public'
 
-app.use('/public', (req, res) => {
-       res.send(express.static)
-})
-        
+app.use('/public', express.static(pathToStylesheet))        
 
 
 
