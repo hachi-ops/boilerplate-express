@@ -19,7 +19,7 @@ app.get('/', function(req, res){
 pathToStylesheet = __dirname + '/public'
 
 app.use('/public', express.static(pathToStylesheet))        
-app.get('/json' (req, res) => {
+app.get('/json', (req, res) => {
   res.send({"message": "Hello json"})
 })
 
