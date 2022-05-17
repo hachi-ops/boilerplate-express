@@ -44,11 +44,16 @@ app.get('/now', (req, res, next) => {
   res.json({time: req.time})
 })
 
-
 app.get('/:word/echo', (req, res) => {
   let word = {echo: req.params.word}
   res.json(word)
 })
+
+app.get('/name', (req, res) => {
+  let string = req.query.firstname + " " + req.query.lastname;
+  res.json({ name: string})
+})
+
 
 
 
