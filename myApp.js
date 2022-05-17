@@ -8,10 +8,12 @@ console.log("Hello World")
 // }
 // )
 
-console.log(_dirname)
+// console.log(_dirname)
+
+absolutePath = __dirname + '/views/index.html'
 
 app.get('/', function(req, res){
-  res.sendFile(_dirname + '/views/index.html')
+  res.sendFile(absolutePath)
 })
 
 
