@@ -8,11 +8,9 @@ console.log("Hello World")
 // }
 // )
 
-app.get('/', _dirname + /views/index.html)
-
-
-
-
+app.get('/', function(req, res) {
+  res.sendFile(_dirname + /views/index.html)
+})
 
 
 
