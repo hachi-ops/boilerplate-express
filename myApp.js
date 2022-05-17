@@ -19,12 +19,17 @@ app.get('/', function(req, res){
 pathToStylesheet = __dirname + '/public'
 
 app.use('/public', express.static(pathToStylesheet))        
+// app.get('/json', (req, res) => {
+//   res.send({"message": "Hello json"})
+// })
+
 app.get('/json', (req, res) => {
-  res.send({"message": "Hello json"})
+  if(process.env.MESSAGE_STYLE === 'uppercase') {
+   res.json({"message": "HELLO JSON"}) 
+  } else {
+    res.json({"message": "Hello json"} )
+  }  
 })
-
-
-
 
 
 
