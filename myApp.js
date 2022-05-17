@@ -8,8 +8,10 @@ console.log("Hello World")
 // }
 // )
 
-app.get('/', function(req, res) {
-  res.sendFile(_dirname + /views/index.html)
+console.log(_dirname)
+
+app.get('/', function(req, res){
+  res.sendFile(_dirname + '/views/index.html')
 })
 
 
